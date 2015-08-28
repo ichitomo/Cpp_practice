@@ -11,16 +11,30 @@
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    char s[6];   //文字列を格納する変数
-    int i;
-    //データを格納する
-    strcpy(s, "hello");
+    // 余裕をもった要素数の配列を用意しておく
+    char s1[100];
+    char s2[100];
+    //文字列を格納する
+    strcpy(s1, "apple");
+    strcpy(s2, "orange");
     //データを表示する
-    cout << s[i] << "文字\t" << "文字コード\n";
-    for (i = 0; i < 6; i++) {
-        cout << s[i] << "\t" << (int)s[i] << "\n";
+    cout << "s1の内容 = " << s1 << "\n";
+    cout << "s2の内容 = " << s2 << "\n\n";
+    //文字列の長さを求める
+    cout << "s1の長さ = " << strlen(s1) << "\n";
+    cout << "s2の長さ = " << strlen(s2) << "\n\n";
+    //文字列を比較する
+    int cmp = strcmp(s1, s2);
+    if (cmp > 0) {
+        cout << s1 << "は" << s2 << "よりも大きい\n\n";
+    }else if (cmp == 0){
+        cout << s1 << "は" << s2 << "と等しい\n\n";
+    }else{
+        cout << s1 << "は" << s2 << "よりも小さい\n\n";
     }
     
+    //文字列を連結する
+    strcat(s1, s2);
+    cout << "s1にs2を連結 = " << s1 << "\n\n";
     return 0;
 }
