@@ -13,10 +13,10 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     char c;     //１文字を格納する変数
-    string s;   //文字列を格納する変数
+    char s[6];   //文字列を格納する変数
     //データを格納する
     c = 'A';
-    s = "hello";
+    strcpy(s, "hello");
     //データを表示する
     cout << c << "\n";
     cout << s << "\n";
