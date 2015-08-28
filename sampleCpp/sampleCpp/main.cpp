@@ -12,13 +12,15 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    char c;     //１文字を格納する変数
     char s[6];   //文字列を格納する変数
+    int i;
     //データを格納する
-    c = 'A';
     strcpy(s, "hello");
     //データを表示する
-    cout << c << "\n";
-    cout << s << "\n";
+    cout << s[i] << "文字\t" << "文字コード\n";
+    for (i = 0; i < 6; i++) {
+        cout << s[i] << "\t" << (int)s[i] << "\n";
+    }
+    
     return 0;
 }
